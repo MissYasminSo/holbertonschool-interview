@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module: Pascals Triangle."""
 
+
 def pascal_triangle(n):
     """Return a list of int"""
     result = []
