@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+"""Module: Lockbox"""
+
 
 def canUnlockAll(boxes):
+    """Return bool if boxes can be unlocked"""
+
     box_perm = []
     for i in range(len(boxes)):
         box_perm.append(0)
