@@ -15,6 +15,8 @@ def canUnlockAll(boxes):
         for index, box in enumerate(boxes):
             if box_perm[index] == 1:
                 for item in box:
+                    if item > len(boxes):
+                        continue
                     if box_perm[item] != 1:
                         change = True
                         box_perm[item] = 1
