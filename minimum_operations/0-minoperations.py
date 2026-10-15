@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module: Min Operation."""
 
+
 def minOperations(n):
     """Minimum operation problem"""
 
