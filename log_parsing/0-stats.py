@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Module: Logging"""
 
 import sys
 
@@ -10,10 +10,12 @@ line_count = 0
 
 
 def print_info():
+    """Prints info"""
     print(f"File size: {total_size}")
 
     for code in sorted(status_codes):
         print(f"{code}: {status_codes[code]}")
+
 
 if __name__ == "__main__":
     try:
@@ -25,7 +27,7 @@ if __name__ == "__main__":
                 try:
                     code = info[7]
 
-                    total_size =  total_size + int(info[8])
+                    total_size = total_size + int(info[8])
 
                     if code in valid_codes:
                         if code in status_codes:
