@@ -26,4 +26,3 @@ def validUTF8(data):
             remaining -= 1
 
     return remaining == 0
-
