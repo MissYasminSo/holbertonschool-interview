@@ -3,27 +3,27 @@
 
 
 def validUTF8(data):
-    """Check data represents valid UTF-8 encoding."""
     remaining = 0
 
     for num in data:
-        byte = num & 0xFF
+        byte = format(num & 255, '08b')
 
         if remaining == 0:
-            if byte >> 7 == 0:
+            if byte.startswith('0'):
                 continue
-            elif byte >> 5 == 0b110:
+            elif byte.startswith('110'):
                 remaining = 1
-            elif byte >> 4 == 0b1110:
+            elif byte.startswith('1110'):
                 remaining = 2
-            elif byte >> 3 == 0b11110:
+            elif byte.startswith('11110'):
                 remaining = 3
             else:
                 return False
         else:
-            if byte >> 6 != 0b10:
+            if not byte.startswith('10'):
                 return False
 
             remaining -= 1
 
     return remaining == 0
+
