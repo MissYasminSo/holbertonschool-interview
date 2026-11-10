@@ -17,4 +17,3 @@ def rotate_2d_matrix(matrix):
     for row, _list in enumerate(copy):
         for col, element in enumerate(_list):
             matrix[row][col] = element
-
